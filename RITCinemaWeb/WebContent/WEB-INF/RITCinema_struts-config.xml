@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN" "http://struts.apache.org/dtds/struts-config_1_3.dtd">
+<struts-config>
+	
+	<form-beans>
+	  <form-bean name="RITCinemaForm" type="ritcinema.forms.RITCinemaForm"></form-bean>
+	</form-beans>
+	
+	<global-exceptions>
+	</global-exceptions>
+	
+	<global-forwards>
+		<forward name="CSIDone" path="/Shows_List.jsp"></forward>
+		<forward name="CMDone" path="/Movies_List.jsp"></forward>
+		<forward name="CCDone" path="/Cinema_List.jsp"></forward>
+		<forward name="CMTDone" path="/MyTicket_List.jsp"></forward>
+		<forward name="CMLDone" path="/MyMail_List.jsp"></forward>
+		<forward name="CDDone" path="/Discount_List.jsp"></forward>
+		<forward name="BTDone" path="/BookMessage.jsp"></forward>
+		<forward name="BCSIDone" path="/BookTicket.jsp"></forward>
+		<forward name="BCFLDone" path="/BuyFood.jsp"></forward>
+		<forward name="BFDone" path="/BuyMessage.jsp"></forward>
+		<forward name="FBDone" path="/FeedbackMessage.jsp"></forward>
+		<forward name="ULDone" path="/CinemaIndex.html"></forward>
+		<forward name="ULFail" path="/LoginMessage.jsp"></forward>
+		<forward name="ALDone" path="/CinemaIndexManage.html"></forward>
+		<forward name="ALFail" path="/LoginMessage.jsp"></forward>
+		<forward name="RDone" path="/RegisterMessage.jsp"></forward>
+		<forward name="CATDone" path="/AllTicket_List.jsp"></forward>
+		<forward name="CFTDone" path="/Food_List.jsp"></forward>
+		<forward name="CCLDone" path="/Contract_List.jsp"></forward>
+		<forward name="CPLDone" path="/Production_List.jsp"></forward>
+		<forward name="ACSLDone" path="/AdminShows_List.jsp"></forward>
+		<forward name="ACMBDone" path="/AdminMail_Box.jsp"></forward>
+		<forward name="SMDone" path="/SendMailMessage.jsp"></forward>
+		<forward name="ISDone" path="/ManageShowMessage.jsp"></forward>
+		<forward name="USDone" path="/ManageShowMessage.jsp"></forward>
+		<forward name="DSDone" path="/ManageShowMessage.jsp"></forward>
+		<forward name="COLDone" path="/MyOrder_List.jsp"></forward>
+		<forward name="ACOLDone" path="/AllOrder_List.jsp"></forward>
+		<forward name="CSLDone" path="/AllStaff_List.jsp"></forward>
+		<forward name="CFLDone" path="/Food_List.jsp"></forward>
+		
+	</global-forwards>
+	
+	<action-mappings>
+	
+		<action path="/doCSI"
+		    type="ritcinema.actions.CheckShowsListAction"
+		    name="RITCinemaForm"
+		    scope="request"
+		    input="/Error.jsp"
+			cancellable="true"
+		    validate="false">
+		</action>
+		
+		<action path="/doCM"
+		    type="ritcinema.actions.CheckMovieListAction"
+		    name="RITCinemaForm"
+		    scope="request"
+		    input="/Error.jsp"
+			cancellable="true"
+		    validate="false">
+		</action>
+		
+		<action path="/doCC"
+		    type="ritcinema.actions.CheckCinemaListAction"
+		    name="RITCinemaForm"
+		    scope="request"
+		    input="/Error.jsp"
+			cancellable="true"
+		    validate="false">
+		</action>
+		
+		<action path="/doCMT"
+		    type="ritcinema.actions.CheckMyTicketListAction"
+		    name="RITCinemaForm"
+		    scope="request"
+		    input="/Error.jsp"
+			cancellable="true"
+		    validate="false">
+		</action>
+		
+		<action path="/doCML"
+		    type="ritcinema.actions.CheckMyMailListAction"
+		    name="RITCinemaForm"
+		    scope="request"
+		    input="/Error.jsp"
+			cancellable="true"
+		    validate="false">
+		</action>
+		
+		<action path="/doCD"
+		    type="ritcinema.actions.CheckDiscountListAction"
+		    name="RITCinemaForm"
+		    scope="request"
+		    input="/Error.jsp"
+			cancellable="true"
+		    validate="false">
+		</action>
+		
+		<action path="/doBT"
+		    type="ritcinema.actions.BookTicketAction"
+		    name="RITCinemaForm"
+		    scope="request"
+		    input="/Error.jsp"
+			cancellable="true"
+		    validate="false">
+		</action>
+		
+		<action path="/doBCSI"
+		    type="ritcinema.actions.BookCheckShowsListAction"
+		    name="RITCinemaForm"
+		    scope="request"
+		    input="/Error.jsp"
+			cancellable="true"
+		    validate="false">
+		</action>
+		
+		<action path="/doBCFL"
+		    type="ritcinema.actions.BuyCheckFoodListAction"
+		    name="RITCinemaForm"
+		    scope="request"
+		    input="/Error.jsp"
+			cancellable="true"
+		    validate="false">
+		</action>
+		
+		<action path="/doBF"
+		    type="ritcinema.actions.BuyFoodAction"
+		    name="RITCinemaForm"
+		    scope="request"
+		    input="/Error.jsp"
+			cancellable="true"
+		    validate="false">
+		</action>
+		
+		<action path="/doFB"
+		    type="ritcinema.actions.FeedBackAction"
+		    name="RITCinemaForm"
+		    scope="request"
+		    input="/Error.jsp"
+			cancellable="true"
+		    validate="false">
+		</action>
+		
+		<action path="/doUL"
+		    type="ritcinema.actions.UserLoginAction"
+		    name="RITCinemaForm"
+		    scope="request"
+		    input="/Error.jsp"
+			cancellable="true"
+		    validate="false">
+		</action>
+		
+		<action path="/doAL"
+		    type="ritcinema.actions.AdminLoginAction"
+		    name="RITCinemaForm"
+		    scope="request"
+		    input="/Error.jsp"
+			cancellable="true"
+		    validate="false">
+		</action>
+		
+		<action path="/doR"
+		    type="ritcinema.actions.RegisterAction"
+		    name="RITCinemaForm"
+		    scope="request"
+		    input="/Error.jsp"
+			cancellable="true"
+		    validate="false">
+		</action>
+		
+		<action path="/doCAT"
+		    type="ritcinema.actions.CheckAllTicketListAction"
+		    name="RITCinemaForm"
+		    scope="request"
+		    input="/Error.jsp"
+			cancellable="true"
+		    validate="false">
+		</action>
+		
+		<action path="/doCFT"
+		    type="ritcinema.actions.CheckFoodListAction"
+		    name="RITCinemaForm"
+		    scope="request"
+		    input="/Error.jsp"
+			cancellable="true"
+		    validate="false">
+		</action>
+		
+		<action path="/doCCL"
+		    type="ritcinema.actions.CheckContractListAction"
+		    name="RITCinemaForm"
+		    scope="request"
+		    input="/Error.jsp"
+			cancellable="true"
+		    validate="false">
+		</action>
+		
+		<action path="/doCPL"
+		    type="ritcinema.actions.CheckProductionListAction"
+		    name="RITCinemaForm"
+		    scope="request"
+		    input="/Error.jsp"
+			cancellable="true"
+		    validate="false">
+		</action>
+		
+		<action path="/doACSL"
+		    type="ritcinema.actions.AdminCheckShowsListAction"
+		    name="RITCinemaForm"
+		    scope="request"
+		    input="/Error.jsp"
+			cancellable="true"
+		    validate="false">
+		</action>
+		
+		<action path="/doACMB"
+		    type="ritcinema.actions.AdminCheckMailBoxAction"
+		    name="RITCinemaForm"
+		    scope="request"
+		    input="/Error.jsp"
+			cancellable="true"
+		    validate="false">
+		</action>
+		
+		<action path="/doSM"
+		    type="ritcinema.actions.SendMailAction"
+		    name="RITCinemaForm"
+		    scope="request"
+		    input="/Error.jsp"
+			cancellable="true"
+		    validate="false">
+		</action>
+		
+		<action path="/doIS"
+		    type="ritcinema.actions.InsertShowAction"
+		    name="RITCinemaForm"
+		    scope="request"
+		    input="/Error.jsp"
+			cancellable="true"
+		    validate="false">
+		</action>
+		
+		<action path="/doUS"
+		    type="ritcinema.actions.UpdateShowAction"
+		    name="RITCinemaForm"
+		    scope="request"
+		    input="/Error.jsp"
+			cancellable="true"
+		    validate="false">
+		</action>
+		
+		<action path="/doDS"
+		    type="ritcinema.actions.DeleteShowAction"
+		    name="RITCinemaForm"
+		    scope="request"
+		    input="/Error.jsp"
+			cancellable="true"
+		    validate="false">
+		</action>
+		
+		<action path="/doCOL"
+		    type="ritcinema.actions.CheckOrderListAction"
+		    name="RITCinemaForm"
+		    scope="request"
+		    input="/Error.jsp"
+			cancellable="true"
+		    validate="false">
+		</action>
+		
+		<action path="/doACOL"
+		    type="ritcinema.actions.AdminCheckOrderListAction"
+		    name="RITCinemaForm"
+		    scope="request"
+		    input="/Error.jsp"
+			cancellable="true"
+		    validate="false">
+		</action>
+		
+		<action path="/doCSL"
+		    type="ritcinema.actions.CheckStaffListAction"
+		    name="RITCinemaForm"
+		    scope="request"
+		    input="/Error.jsp"
+			cancellable="true"
+		    validate="false">
+		</action>
+		
+		<action path="/doCFL"
+		    type="ritcinema.actions.CheckFoodListAction"
+		    name="RITCinemaForm"
+		    scope="request"
+		    input="/Error.jsp"
+			cancellable="true"
+		    validate="false">
+		</action>
+		
+	
+	</action-mappings>
+	
+	<message-resources parameter="ritcinemaweb.resources.ApplicationResources"/>
+</struts-config>
